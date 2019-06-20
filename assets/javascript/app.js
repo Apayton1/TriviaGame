@@ -3,8 +3,14 @@ $(document).ready(function () {
     var number = 30;
 // This will store the interval ID
     var intervalId; 
-// This will start the timer when the button with the 
-    $("#start-timer").on("click", start); 
+// This will start the timer when the button with the start-timer id is clicked and it will 
+// begin a for loop to run through quizQuestions
+    $("#start-timer").on("click", function(){
+        start();
+        for(i=0; i< quizQuestions.length; i++){
+            $("#questions").html(question[i]+ "<br>");
+        };
+    }); 
 // This function will store the execution to start the clock to run by seconds
     function start() {
         clearInterval(intervalId);
@@ -20,7 +26,7 @@ $(document).ready(function () {
     function decrease(){
         number --;
         
-        $("#timer-text").html(number);
+        $("#timer-text").html(":" + number);
         
         if(number === 0){
             stop();
@@ -75,8 +81,6 @@ $(document).ready(function () {
 
     }
 
-    function timedQuestions() {
-
-    }
+    
 })
 
