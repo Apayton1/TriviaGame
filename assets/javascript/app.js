@@ -3,14 +3,16 @@ $(document).ready(function () {
     var number = 30;
 // This will store the interval ID
     var intervalId; 
-
-    $("start-timer").on("click", start); 
+// This will start the timer when the button with the 
+    $("#start-timer").on("click", start); 
 // This function will store the execution to start the clock to run by seconds
     function start() {
         clearInterval(intervalId);
-        intervalId = setInterval(decrement, 1000);
-        console.log(start);
+        intervalId = setInterval(decrease, 1000);
+        
     }
+
+    console.log(start);
 
 //This function, when executed, will cause the clock to run backwards from 
 // the set number and add text to the HTML when the clock reaches 0 
@@ -26,6 +28,7 @@ $(document).ready(function () {
             $("<h2>'You're Out of Time!</h2>")
 
         }
+        
     }
 
 // This function stops the timer by clearing the interval ID
