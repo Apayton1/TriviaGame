@@ -71,7 +71,19 @@ $(document).ready(function () {
             question: "What does the charm wingardium leviosa do?",
             answer: "Levitation",
             choices: ["Levitation", "Obliviate", "Turn on the lights", "Unlock doors"],
-        }
+        },
+        {
+            question:"What was Ron Wheezly's fear?",
+            answer: "Spiders",
+            choices:["Spiders","Clowns", "Snakes","Heights"],
+        },
+        {
+            question:"What is the name of the snake language? ",
+            answer: "Parselmouth",
+            choices:["Parselmouth","Parseltongue", "Slithertongue","Slithermouth"],
+        },
+    
+    
 
         ]
 
